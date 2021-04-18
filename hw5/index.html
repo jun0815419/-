@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>PeiJun Lin's Portfolio</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+	<script src="js/jQuery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/script.js"></script>
+	<script src="https://www.jq22.com/jquery/jquery-3.3.1.js"></script>
+	<script src="/jquery/jquery-1.11.1.min.js"></script>
+
+	<div class="header" id="home">
+		<div class="header-top">
+			<div class="logo">
+				<div class="logo-img">
+					<a href="#home"><img src="img/logo.png"></a>
+				</div>
+			</div>
+			<div class="list">
+				<li class="list-item"><a href="#home" class="list-item-link">首頁</a></li>
+				<li class="list-item"><a href="#content1" class="list-item-link">關於我</a></li>
+				<li class="list-item"><a href="#service" class="list-item-link">提供的服務</a></li>
+				<li class="list-item"><a href="#content2" class="list-item-link">作品</a></li>
+				<li class="list-item"><a href="#contact" class="list-item-link">聯絡我</a></li>
+			</div>
+		</div>
+
+		<div class="cover">
+			<img src="img/cover.png">
+		</div>
+
+		<div class="header-content">
+			<h1 class="header-content-title">There Is No Life<br><br>Where U Make Money Easily</h1>
+		</div>
+	</div>
+
+	<div class="content">
+		<div class="content1" id="content1">
+			<div class="about">
+				<p class="about-title">關於我</p>
+				<hr class="line">
+				<div class="about-content">
+					<div class="introduction">
+						<p class="introduction-title">INTRODUCTION</p>
+						<p class="introduction-content">
+						大學就學兩年間學習過影像及圖像製作、傳播寫作，對於行銷也有初步的了解及學習。<br>曾製作彰化縣警察局芳苑分局110年春節連假交通宣導懶人包和一些商業宣傳圖片。
+						</p>
+					</div>
+					<div class="skill">
+						<p class="skill-title">SKILL</p>
+						<p class="skill-content">
+							Photoshop / Illustrator / Premiere
+						</p>
+					</div>
+					<div class="education">
+						<p class="education-title">EDUCATION</p>
+						<p class="education-content">
+							2019_國立陽明交通大學/傳播與科技學系<br>2016_國立彰化女子高級中學
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="service" id="service">
+			<p class="service-title">提供的服務</p>
+				<hr class="line">
+				<p class="service-content">
+					圖像設計 / 影片剪輯 / 文字創作
+				</p>
+		</div>
+
+		<div class="content2" id="content2">
+			<p class="content2-title">作品</p>
+			<hr class="line">
+			<div class="pic">
+				<img src="img/pic.png">
+			</div>
+
+			<div class="art">
+				<p class="big">(點擊圖片以放大檢視)</p>
+				<div class="album1">
+					<p class="album-title">圖像設計</p>
+   					 <!-- album1 -->
+    				<div id="imgdiv" onclick="imgbig1();">
+       					 <img src="img/1.png" id="imgsrc1" />
+   					 </div>
+    				<div id="bigimg" onclick="closeimg();"></div>
+
+    				<div id="imgdiv" onclick="imgbig2();">
+       					 <img src="img/2.png" id="imgsrc2" />
+   					 </div>
+    				<div id="bigimg" onclick="closeimg();"></div>
+
+    				<div id="imgdiv" onclick="imgbig3();">
+       					 <img src="img/3.png" id="imgsrc3" />
+   					 </div>
+    				<div id="bigimg" onclick="closeimg();"></div>
+
+    				<div id="imgdiv" onclick="imgbigmu();">
+       					 <img src="img/木.jpg" id="imgsrcmu" />
+   					 </div>
+    				<div id="bigimg" onclick="closeimg();"></div>
+
+    				<div id="imgdiv" onclick="imgbiglin();">
+       					 <img src="img/林.jpg" id="imgsrclin" />
+   					 </div>
+    				<div id="bigimg" onclick="closeimg();"></div>
+
+    				<div id="imgdiv" onclick="imgbigsen();">
+       					 <img src="img/森.jpg" id="imgsrcsen" />
+   					 </div>
+    				<div id="bigimg" onclick="closeimg();"></div>
+				</div>
+
+
+				<div class="album2">
+					<p class="album-title">商品宣傳設計</p>
+					 <!-- album2 -->
+    				<div id="imgdiv" onclick="imgbigfood1();">
+       					 <img src="img/food1.jpg" id="imgsrcfood1" />
+   					 </div>
+    				<div id="bigimg" onclick="closeimg();"></div>
+
+    				<div id="imgdiv" onclick="imgbigfood2();">
+       					 <img src="img/food2.png" id="imgsrcfood2" />
+   					 </div>
+    				<div id="bigimg" onclick="closeimg();"></div>
+
+    				<div id="imgdiv" onclick="imgbigfood3();">
+       					 <img src="img/food3.png" id="imgsrcfood3" />
+   					 </div>
+    				<div id="bigimg" onclick="closeimg();"></div>
+	
+
+				</div>
+				<div class="album3">
+					<p class="album-title">警局交通宣導懶人包設計</p>
+					 <!-- album2 -->
+    				<div id="imgdiv" onclick="imgbig002();">
+       					 <img src="img/002.jpg" id="imgsrc002" />
+   					 </div>
+    				<div id="bigimg" onclick="closeimg();"></div>
+
+    				<div id="imgdiv" onclick="imgbig003();">
+       					 <img src="img/003.jpg" id="imgsrc003" />
+   					 </div>
+    				<div id="bigimg" onclick="closeimg();"></div>
+
+    				<div id="imgdiv" onclick="imgbig004();">
+       					 <img src="img/004.jpg" id="imgsrc004" />
+   					 </div>
+    				<div id="bigimg" onclick="closeimg();"></div>
+
+    				<div id="imgdiv" onclick="imgbig005();">
+       					 <img src="img/005.jpg" id="imgsrc005" />
+   					 </div>
+    				<div id="bigimg" onclick="closeimg();"></div>
+
+    				<div id="imgdiv" onclick="imgbig006();">
+       					 <img src="img/006.jpg" id="imgsrc006" />
+   					 </div>
+    				<div id="bigimg" onclick="closeimg();"></div>
+
+    				<div id="imgdiv" onclick="imgbig007();">
+       					 <img src="img/007.jpg" id="imgsrc007" />
+   					 </div>
+    				<div id="bigimg" onclick="closeimg();"></div>
+
+    				<div id="imgdiv" onclick="imgbig008();">
+       					 <img src="img/008.jpg" id="imgsrc008" />
+   					 </div>
+    				<div id="bigimg" onclick="closeimg();"></div>
+
+    				<div id="imgdiv" onclick="imgbig009();">
+       					 <img src="img/009.jpg" id="imgsrc009" />
+   					 </div>
+    				<div id="bigimg" onclick="closeimg();"></div>
+
+    				<div id="imgdiv" onclick="imgbig010();">
+       					 <img src="img/010.jpg" id="imgsrc010" />
+   					 </div>
+    				<div id="bigimg" onclick="closeimg();"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	
+
+	<div class="contact" id="contact">
+		<p class="content2-title">聯絡我</p>
+			<hr class="line">
+		<div class="contact-content">
+			<h1 class="contact-content-title">CONTACT</h1>
+			<p class="contact-content-p">PeiJun Lin</p>
+			<p class="email">jun0815419.cts08@nctu.edu.tw</p>
+		</div>
+	</div>
+
+	<div class="footer" id="footer">
+		<p class="info">&copy;2021 by PeiJun Lin</p>
+	</div>
+</body>
