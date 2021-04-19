@@ -139,9 +139,3 @@ function imgbig010() {
         toText.value=initTo;
         bodyText.value=initBody;
     }
-
-
-
-$(document).ready(function(){
-    $(".banner").fadeIn(3000);
-  });

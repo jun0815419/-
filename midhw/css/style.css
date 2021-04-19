@@ -69,6 +69,7 @@ p,h1,h2,h3,h4,h4,h6,div,span {
 	width: 100%;
 	position: fixed;
 	z-index: -1;
+	opacity: 0.6;
 }
 
 .content{
@@ -308,5 +309,5 @@ p,h1,h2,h3,h4,h4,h6,div,span {
         }
 
 .banner{
-
+	height: 840px;
 }
