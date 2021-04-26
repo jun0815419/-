@@ -1,0 +1,10 @@
+html{
+    width: 1024px;
+}
+
+.qian img{
+    width: 1024px;
+    height: 650px;
+    position: fixed;
+    z-index: 10;
+}
