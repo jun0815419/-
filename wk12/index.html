@@ -1,0 +1,186 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>HW-canvas</title>
+  
+</head>
+
+<canvas id="mycanvas"></canvas>
+
+<style type="text/css">
+	html,body{
+  height: 100%; /*高度撐滿100%*/
+  display:flex;
+  justify-content: center; /*水平置中*/
+  align-items: center; /*垂直置中*/
+}
+
+canvas{
+  border:3px solid black; /*讓canvas看得到*/
+}
+
+</style>
+
+<script type="text/javascript">
+	//先抓到畫面上的cv元素
+var canvas = document.getElementById("mycanvas")
+var ctx = canvas.getContext("2d")
+
+//設定尺寸
+canvas.width= 400
+canvas.height= 400
+
+  var time=0
+  
+  var mouse={
+  x:0,
+  y:0
+}
+
+canvas.addEventListener("mousemove",function(evt){
+  mouse.x=evt.offsetX
+  mouse.y=evt.offsetY
+})
+
+function draw(){
+  time++
+  ctx.clearRect(0,0,400,400)
+  
+  //座標繪製
+  ctx.beginPath()
+  for(var i=0;i<10;i++){
+    let pos = i*50 //每格50劃一條線
+    ctx.moveTo(pos,0) //x軸起點
+    ctx.lineTo(pos,400) //x軸終點
+    ctx.fillText(pos,pos,10) //x軸繪製文字(內容,x位置,y位置)
+    //
+    ctx.moveTo(0,pos) //y軸起點
+    ctx.lineTo(400,pos) //y軸終點
+    ctx.fillText(pos,10,pos) //y軸繪製文字(內容,x位置,y位置)
+  }
+  ctx.strokeStyle = "rgba(0,0,0,0.1)"
+  ctx.stroke()
+  
+
+  
+  
+  ctx.beginPath()
+  ctx.moveTo(25,350)
+  ctx.lineTo(375,350)
+  ctx.lineWidth = 2
+  ctx.strokeStyle ="black"
+  ctx.stroke()//底線
+  
+  ctx.strokeStyle = "black"
+  ctx.fillStyle="#fffff0"
+  ctx.fillRect(75,225,250,125)
+  ctx.strokeRect(75,225,250,125)//房體
+  
+  ctx.beginPath()
+  ctx.moveTo(100,150)
+  ctx.lineTo(300,150)
+  ctx.lineTo(375,225)
+  ctx.lineTo(25,225)
+  ctx.closePath()
+  ctx.fillStyle="#212121"
+  ctx.fill()
+  ctx.strokeStyle = "black"
+  ctx.stroke()//屋頂
+  
+  ctx.beginPath()
+  ctx.moveTo(100,250)
+  ctx.lineTo(225,250)
+  ctx.lineTo(225,340)
+  ctx.lineTo(100,340)
+  ctx.closePath()
+  ctx.fillStyle="rgba(173, 216, 230,0.3)"
+  ctx.fill()
+  ctx.strokeStyle = "black"
+  ctx.stroke()//窗戶
+  
+  ctx.beginPath()
+  ctx.moveTo(250,265)
+  ctx.lineTo(300,265)
+  ctx.lineTo(300,350)
+  ctx.lineTo(250,350)
+  ctx.closePath()
+  ctx.fillStyle="#f9b342"
+  ctx.fill()
+  ctx.strokeStyle = "black"
+  ctx.stroke()//門
+  
+  ctx.beginPath()
+  ctx.moveTo(250,125)
+  ctx.lineTo(275,125)
+  ctx.lineTo(275,175)
+  ctx.lineTo(250,175)
+  ctx.closePath()
+  ctx.fillStyle="#393939"
+  ctx.fill()
+  ctx.strokeStyle = "black"
+  ctx.stroke()//煙囪
+  
+  ctx.beginPath()
+  ctx.moveTo(150,175)
+  ctx.lineTo(175,175)
+  ctx.lineTo(185,200)
+  ctx.lineTo(140,200)
+  ctx.closePath()
+  ctx.fillStyle="white"
+  ctx.fill()
+  ctx.strokeStyle = "black"
+  ctx.stroke()//天窗1白
+  
+  ctx.beginPath()
+  ctx.moveTo(150,175)
+  ctx.lineTo(175,175)
+  ctx.lineTo(185,200-mouse.y/5)
+  ctx.lineTo(140,200-mouse.y/5)
+  ctx.closePath()
+  ctx.fillStyle="rgba(175, 238, 238,0.7)"
+  ctx.fill()
+  ctx.strokeStyle = "black"
+  ctx.stroke()//天窗1開
+    
+  ctx.beginPath()
+  ctx.moveTo(200,175)
+  ctx.lineTo(250,175)
+  ctx.lineTo(275,200)
+  ctx.lineTo(215,200)
+  ctx.closePath()
+  ctx.fillStyle="white"
+  ctx.fill()
+  ctx.strokeStyle = "black"
+  ctx.stroke()//天窗2白
+  
+    ctx.beginPath()
+  ctx.moveTo(200,175)
+  ctx.lineTo(250,175)
+  ctx.lineTo(275,200-mouse.y/5)
+  ctx.lineTo(215,200-mouse.y/5)
+  ctx.closePath()
+  ctx.fillStyle="rgba(175, 238, 238,0.7)"
+  ctx.fill()
+  ctx.strokeStyle = "black"
+  ctx.stroke()//天窗2開
+  
+  let cloudx=time%440-40
+  ctx.beginPath()
+  ctx.arc(cloudx+50,75,25,0,360)
+  ctx.arc(cloudx+70,80,15,0,360)
+  ctx.arc(cloudx+30,77,20,0,360)
+  ctx.closePath()
+  ctx.fillStyle="#add8e6"
+  ctx.fill()//雲
+ 
+  ctx.beginPath()
+ctx.arc(mouse.x,mouse.y,5,0,Math.PI*2)
+  ctx.fillStyle="black"
+  ctx.fill()//滑鼠點點
+  
+  
+}
+draw()
+setInterval(draw,30)
+</script>
