@@ -142,7 +142,6 @@ html,body{
 	display: flex;
   	justify-content: space-around;
   	margin-top: 30px;
-	letter-spacing: 10px;
 }
 
 .form input {
